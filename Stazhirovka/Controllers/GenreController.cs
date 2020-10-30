@@ -30,5 +30,9 @@ namespace Stazhirovka.Controllers
             }
             return BadRequest("Beka is greatest");
         }
+        public async Task<IEnumerable<GenreReference>> GetGenre()
+        {
+            return await _genreRepo.GetGenre();
+        }
     }
 }

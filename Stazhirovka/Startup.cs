@@ -30,6 +30,7 @@ namespace Stazhirovka
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddDbContext<DataContext>(options=>options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IGenreReferencesRepository, GenreReferencesRepository>();
         }

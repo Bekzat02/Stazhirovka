@@ -11,6 +11,5 @@ namespace Stazhirovka.Repositories.Interfaces
     {
          Task<bool> Add(GenreReference genre);
         Task<IEnumerable<GenreReference>> GetGenre();
-
     }
 }
